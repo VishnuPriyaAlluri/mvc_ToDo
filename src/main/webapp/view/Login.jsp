@@ -1,5 +1,5 @@
  <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 
@@ -18,6 +18,7 @@
 
 <body>
 	<div>
+	      <h1 style="color:green">${pass}</h1>
 		<h1>Todo Login</h1>
 		<!-- action is address where the values are carried to  -->
 		<form action="login" method="post">
@@ -41,7 +42,7 @@
 					</tr>
 					<tr>
 						<!-- This is for Loading Signup Page -->
-						<th colspan="2"><a href="Signup.html"><button type="button">Click to Create Account</button></a>
+						<th colspan="2"><a href="Signup"><button type="button">Click to Create Account</button></a>
 						</th>
 					</tr>
 				</table>

@@ -18,6 +18,7 @@
 
 <body>
 	<div>
+	      <h2 style="color:red">${fail}</h2>
 	      <h1 style="color:green">${pass}</h1>
 		<h1>Todo Login</h1>
 		<!-- action is address where the values are carried to  -->
@@ -29,11 +30,13 @@
 						<th>Email: </th>
 						<!-- Name attribute is Complusory to carry value  -->
 						<th><input type="email" name="email"></th>
+						<th><h4 style="color:red">${email}</h4></th>
 					</tr>
 					<tr>
 						<th>Password: </th>
 						<!-- Name attribute is Complusory to carry value  -->
 						<th><input type="password" name="password"></th>
+						<th><h4 style="color:red">${password}</h4></th>
 					</tr>
 					<tr>
 						<!-- Clicking this button will carry the values to action Location  -->

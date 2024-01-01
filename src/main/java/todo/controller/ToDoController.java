@@ -1,6 +1,6 @@
 package todo.controller;
 
-import java.time.LocalDate;
+
 
 import javax.servlet.http.HttpSession;
 
@@ -38,21 +38,21 @@ public class ToDoController {
   @PostMapping("/signup")
  
   public String signup(ToDoUser user,@RequestParam String date,ModelMap map) {
-	  user.setDob(LocalDate.parse(date));
-	  return service.Signup(user, date,map);
+//	  user.setDob(LocalDate.parse(date));
+	  return service.signup(user, date,map);
   }
-@PostMapping("/login")  
-public String login(@RequestParam String email,String password,ModelMap map,HttpSession session) {
+  @PostMapping("/login")  
+  public String login(@RequestParam String email,String password,ModelMap map,HttpSession session) {
 	return service.login(email,password,map,session);
 }
 
-@GetMapping("/logout")
-public String logout(HttpSession session,ModelMap map) {
+  @GetMapping("/logout")
+  public String logout(HttpSession session,ModelMap map) {
 	return service.logout(session,map);
 }
 
-@GetMapping("/add-task")
-public String loadAddTask(HttpSession session,ModelMap map) {
+  @GetMapping("/add-task")
+  public String loadAddTask(HttpSession session,ModelMap map) {
 	return service.addTask(session,map);
 }
 
@@ -60,6 +60,26 @@ public String loadAddTask(HttpSession session,ModelMap map) {
 public String addTask(ToDoTask task,HttpSession session,ModelMap map) {
 	return service.addTask(task,session,map);
 }
+
+@GetMapping("/change-status")
+public String changeStatus(@RequestParam int id,HttpSession session,ModelMap map) {
+	return service.changeStatus(id,session,map);
+}
+@GetMapping("/delete")
+public String deleteTask(@RequestParam int id,HttpSession session,ModelMap map) {
+	return service.deleteTask(id,session,map);
+}
+
+@GetMapping("/edit")
+public String editTask(@RequestParam int id,HttpSession session,ModelMap map) {
+	return service.loadEdit(id,session,map);
+}
+
+@PostMapping("/update-task")
+public String updateTask(HttpSession session,ModelMap map,ToDoTask task) {
+	return service.updateTask(session,map,task);
+}
+
   
  
 }

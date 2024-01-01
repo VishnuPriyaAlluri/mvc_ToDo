@@ -48,12 +48,15 @@
 				<input type="radio" name="gender" value="female">Female</th>
 			</tr>
 			<tr>
-				<th><button>Signup</button></th>
-				<th><button>Cancel</button></th>
+				<!-- Clicking this button will carry the values to action Location  -->
+						<th><button>Signup</button></th>
+						<th><button type="reset">Cancel</button></th>
 				
 			</tr>
 			<tr>
-				<th><button>Login if you have already have account</button></th>
+				<!-- This is for Loading Login Page -->
+						<th colspan="2"><a href="login"><button
+									type="button">Click if Already have Account</button></a></th>
 			</tr>
 		</table>
 	</fieldset>
